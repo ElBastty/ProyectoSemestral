@@ -29,4 +29,12 @@ public class InstitutoMeteorologia{
         System.out.println("Region creada exitosamente");
         return  true;
     }
+    public boolean creaComuna(int codigo, String nombre, int codigoRegion) {
+        for (int i = 0; i < regiones.size(); i++) {
+            if (regiones.get(i).getCodigo() == codigoRegion) {
+                return regiones.get(i).addComuna(codigo, nombre);
+            }
+        }
+        return false;
+    }
 }
